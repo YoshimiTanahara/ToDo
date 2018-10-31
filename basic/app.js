@@ -142,6 +142,7 @@ for (let i = 1; i <= 10; i++) {
 //     break;
 //   case 'green':
 //     console.log('進め');
+
 //     break;
 //   default:
 //   // defaultはelseと一緒の意味
@@ -190,7 +191,8 @@ for (let i = 1; i<= 100; i ++) {
 // }
 
 // console.log('FizzBuzz(switch)----------------');
-// for (let i = 1; i <= 100; i++) {
+// for (let i = 1; i
+ // <= 100; i++) {
 //   switch (true) {
 //     case i % 5 === 0 && i % 3 === 0:
 //       console.log('FizzBuzz');
