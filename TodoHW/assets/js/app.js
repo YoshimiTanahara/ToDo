@@ -53,4 +53,12 @@ function addTaskToDOM(taskName,isDone) {
 
   // 削除ボタンをクリック
   remove.addEventListener('click',removeTask);
+
+  // 完了ボタンの作成
+  let done = document.createElement('button');
+  done.classlist.add('done');
+  done.innerHTML = doneIcon;
+
+  // 完了ボタンをクリック
+  done.addEventListener('click',doneTask);
 }
