@@ -83,3 +83,20 @@ function removeTask() {
   }
   dataObjectUpdate();
 }
+
+function doneTask() {
+  let task = this.parentNode.parentNode;
+  let id = task.parentNode.id;
+  if (id === 'done') {
+    return;
+  }
+
+  let value = task.textContent;
+
+  let target = document.getElementById('done');
+  target.appendChild(task);
+
+  data.not.splice(data.not.indexOf(value),1);
+  data.done.push(value);
+  dataObjectUpdate();
+}
