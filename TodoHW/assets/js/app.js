@@ -5,7 +5,7 @@ let data;
 if (localStorage.getItem('todoList')){
   data = JSON.parse(localStorage.getItem('todoList'));
 
-  renderTodoList();
+  // renderTodoList();
 
 } else {
 
@@ -61,4 +61,17 @@ function addTaskToDOM(taskName,isDone) {
 
   // 完了ボタンをクリック
   done.addEventListener('click',doneTask);
+
+  buttons.appendChild(remove);
+  buttons.appendChild(done);
+  not.appendChild(buttons);
+  list.appendChild(not);
+}
+
+function removeTask() {
+  let task = this.parentNode.parentNode;
+  let id = task.parentNode.id;
+  let value = task.textContent;
+
+  task.remove();
 }
