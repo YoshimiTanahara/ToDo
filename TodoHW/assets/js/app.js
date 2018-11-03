@@ -41,4 +41,16 @@ function addTaskToDOM(taskName,isDone) {
   let not = document.createElement('li');
   let text = document.createTextNode(taskName);
   not.appendChild(text);
+
+  // ボタンを表示する場所
+  let buttons = document.createElement('div');
+  buttons.classlist.add('buttons');
+
+  // 削除ボタンの作成
+  let remove = document.createElement('button');
+  remove.classlist.add('remove');
+  remove.innerHTML = removeIcon;
+
+  // 削除ボタンをクリック
+  remove.addEventListener('click',removeTask);
 }
