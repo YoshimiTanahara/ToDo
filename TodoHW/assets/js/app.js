@@ -74,4 +74,12 @@ function removeTask() {
   let value = task.textContent;
 
   task.remove();
+
+  // DBから削除
+  if (id === 'not-yet') {
+    data.not.splice(data.not.indexOf(value),1);
+  } else {
+    data.done.splice(data.done.indexOf(value),1);
+  }
+  dataObjectUpdate();
 }
