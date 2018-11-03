@@ -29,3 +29,16 @@ console.log(data);
   data.not.push(taskName);
   localStorage.setItem('todoList',JSON.stringify(data));
   })
+
+function addTaskToDOM(taskName,isDone) {
+  let list;
+  if (isDone) {
+    list = document.getElementById('done');
+  } else {
+    list = document.getElementById('not-yet');
+  }
+
+  let not = document.createElement('li');
+  let text = document.createTextNode(taskName);
+  not.appendChild(text);
+}
